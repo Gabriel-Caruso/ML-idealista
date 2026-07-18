@@ -458,7 +458,7 @@ def diagrama_dispersion(df, variable_x, variable_y, guardar=False):
 
 # ---- FUNCIONES DE PREPROCESADO ----
 
-def limpiar_ausentes_estructurales(df, columna, es_unifamiliar):
+def limpiar_ausentes(df, columna, es_chalet_casa):
     """
     Crea una "columna_limpio" de una columna con valores ausentes.
     Los NaN se recodifican segun el tipo de vivienda:
@@ -468,6 +468,6 @@ def limpiar_ausentes_estructurales(df, columna, es_unifamiliar):
     """
     columna_limpia = columna + "_limpio"
     df[columna_limpia] = df[columna]
-    df.loc[es_unifamiliar & df[columna].isna(), columna_limpia] = "NO_APLICA"
-    df.loc[~es_unifamiliar & df[columna].isna(), columna_limpia] = "DESCONOCIDO"
+    df.loc[es_chalet_casa & df[columna].isna(), columna_limpia] = "NO_APLICA"
+    df.loc[~es_chalet_casa & df[columna].isna(), columna_limpia] = "DESCONOCIDO"
     return df
