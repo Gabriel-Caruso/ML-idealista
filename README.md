@@ -7,7 +7,7 @@ Proyecto ML predicción de precios de vivienda a la venta en Madrid.
 Predecir el precio estimado actual de una vivienda a la venta en madrid a partir de las características publicadas en el anuncio. El objetivo es disponer de un estimador de referencia consistente que oriente sobre el precio del mercado sin necesidad de una tasación formal.
 
 ### Dataset
-**Fuente**: [Dataset de Kaggle][https://www.kaggle.com/datasets/fjcob1/idealista-madrid] con un listado de anuncios de vivienda en venta en Madrid.
+**Fuente**: [Dataset de Kaggle](https://www.kaggle.com/datasets/fjcob1/idealista-madrid) con un listado de anuncios de vivienda en venta en Madrid.
 **Tamaño:** 11.836 anuncios.
 **Columnas:** 14: provincia, zona, titulo, PrecioActual, PrecioAnterior, metros, habitaciones, ascensor, localizacion, planta, baños, tags, descripcion, Enlace.
 **Target:** PrecioActual
